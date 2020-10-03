@@ -1,0 +1,16 @@
+ethical-hacking, created 10/03/2020
+
+Miscellaneous commands:
+  
+  shasum 
+
+Items:
+
+-001- (1) Given passwords.txt, 2 fields, userid:hash
+      (2) Using fishshell (cf. https://fishshell.com) and my password database 'secretmagicword' iterate to get matching hash
+      (3) for i in secretmagicword password 12345
+            grep (echo "$i" | shasum -a 384 | cut -c1-40) passwords.txt; end
+            
+      (4) Assuming a user had that password '12345' set, I got it.
+      
+  
